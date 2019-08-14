@@ -1,6 +1,6 @@
-package step1;
+package study01;
 import java.util.Scanner;
-public class Print5Times {
+public class engine {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
