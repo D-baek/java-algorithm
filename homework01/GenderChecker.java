@@ -1,5 +1,4 @@
 package homework01;
-
 import java.util.Scanner;
 
 class GenderChecker{

@@ -1,4 +1,5 @@
 package homework02;
+import java.util.Scanner;
 /*To. 개발자님
 프로그램을 하나 개발해야 합니다.
 교수가 요청하기를 브라우저에서 사용할 계산기를 만들어 달랍니다.
@@ -12,5 +13,34 @@ package homework02;
 그러면 []값이 나머지인지는 교수가 이미 알고 있겠답니다.*/
 
 public class ArithmeticCalculator {
-
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in );
+		String eval = "";
+		
+		while(true) {
+			System.out.println("===사칙연산 계산기 입니다!===");
+			System.out.println("=시작값을 입력하세요=");
+			int start = scan.nextInt();
+			System.out.println("원하시는 사칙연산은?");
+			System.out.println("===1.덧셈 2.뺄셈 3.곱셈 4.나눗셈 ===");
+			int op = scan.nextInt();
+			System.out.println("===마지막값을 입력하세요===");
+			int end = scan.nextInt();
+			int dd = start % end;
+		
+			if(op==1) {
+			eval += (start +end);
+			} else if(op==2){
+			eval += (start - end);
+			} else if(op==3){
+			eval += (start * end);
+			} else if(op==4){
+			if(start / end !=0) {
+				eval = start/end + "[" + start%end + "]";
+				}else eval += start / end ;
+			}else {System.out.println("잘못 입력하셨습니다."); return;
+		} 
+		System.out.println(eval);
+		}
+	}
 }
